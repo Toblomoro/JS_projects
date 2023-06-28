@@ -31,21 +31,21 @@ function win(userChoice, computerChoice){
 userScore++;
 userScore_span.innerHTML = userScore;
 computerScoreScore_span.innerHTML = computerScore;
-result_div.innerHTML= converter(userChoice) + " beats " + converter(computerChoice) + " You win! 🔥 👍";
+result_div.innerHTML= "You chose " + converter(userChoice) + ", the computer chose " + converter(computerChoice) + " You win! 🔥 👍";
 
     }
 function lose(userChoice, computerChoice) {
     computerScore++
     userScore_span.innerHTML = userScore;
     computerScoreScore_span.innerHTML = computerScore;
-    result_div.innerHTML= converter(userChoice) + " loses to " + converter(computerChoice) + " You lose.... 💩 👎" 
+    result_div.innerHTML= "You chose " + converter(userChoice) + ", the computer chose " + converter(computerChoice) + " You lose.... 💩 👎" 
 
 }
-function draw() {
+function draw(userChoice, computerChoice) {
 
 userScore_span.innerHTML = userScore;
 computerScoreScore_span.innerHTML = computerScore;
-result_div.innerHTML="Tie!"   
+result_div.innerHTML="You chose " + converter(userChoice) + ", the computer chose " + converter(computerChoice) + " Tie! 🍎 🍊"    
 }
 
 
@@ -69,7 +69,7 @@ function game(userChoice) {
       case "rr":
       case "ss":
       case "pp":
-        draw();
+        draw(userChoice, computerChoice);
         break;
 
       default:
